@@ -51,7 +51,7 @@ It uses data structures & algorithms (Dijkstra's shortest path, priority queue l
 ***
 
 ## Project Structure
-```
+
 ```
 /backend
     app.py
@@ -71,6 +71,7 @@ It uses data structures & algorithms (Dijkstra's shortest path, priority queue l
 ... (additional assets)
 DSA_PBL-phase-2-report.pdf
 README.md
+
 ```
 
 ***
