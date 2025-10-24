@@ -168,7 +168,7 @@ Fork the repo, create a feature branch, open a PR.
 
 ## 🧑‍💻 Team
 
-- **Shubham Kumar**
+- **Shubham Kumar** (**TEAM LEAD**)
 - **Avni Negi**
 - **Jahnvi Sharma**
 - **Parikshit Panwar**
@@ -187,9 +187,3 @@ This project is for academic/demonstration use under GEU CSE PBL.
 - [Chart.js](https://www.chartjs.org/)
 - [Python Flask](https://flask.palletsprojects.com/)
 - [Render Cloud Hosting](https://render.com/)
-
-***
-
-
-This is GitHub-ready and visually appealing.  
-If you want even more styling, add badges at the top — or create separate sections for demo links or report PDF. Just say the word!
