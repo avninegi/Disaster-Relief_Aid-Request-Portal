@@ -1,10 +1,10 @@
-#### 🌍 Disaster Relief Aid Request Portal
+# 🌍 Disaster Relief Aid Request Portal
 
 > **Efficient, simulation-based decision support for resource allocation in disaster scenarios. Combines Dijkstra’s algorithm, intelligent prioritization, and interactive web mapping.**
 
 ***
 
-### 📋 Table of Contents
+## 📋 Table of Contents
 - [Overview](#overview)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
@@ -77,7 +77,7 @@ README.md
 
 ***
 
-#### 🚀 Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 - Python 3.x
