@@ -1,0 +1,170 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #dffffc;
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+h1 {
+  text-align: center;
+  color: #560b0b;
+  margin-top: 1rem;
+  font-size: 1.8rem;
+} 
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 95%;
+  max-width: 1700px;
+  margin: 1.5rem auto;
+}
+
+.form-section {
+  flex: 0 0 340px;
+  background: #ffffff;
+  padding: 20px 24px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+select,
+input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease;
+}
+
+select:focus,
+input:focus {
+  border-color: #1d7d66;
+  outline: none;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-primary,
+.btn-secondary {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-primary {
+  background-color: #1d7d66;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #176853;
+}
+
+.btn-secondary {
+  background-color: #edf3f2;
+  color: #222;
+  border: 1px solid #ccc;
+}
+
+.btn-secondary:hover {
+  background-color: #a2fff4;
+}
+
+#addedZonesList {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+#addedZonesList li {
+  background: #eef7f6;
+  padding: 8px 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+#addedZonesList button {
+  border: none;
+  background: none;
+  color: #e63946;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Map - increased size */
+#map {
+  flex: 1;
+  height: 760px;
+  min-width: 700px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Charts Section */
+.stats-section {
+  width: 95%;
+  max-width: 1700px;
+  background: white;
+  border-radius: 12px;
+  margin: 2rem auto;
+  padding: 20px 24px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.stats-section h2 {
+  margin-bottom: 1rem;
+}
+
+/* Stack charts vertically */
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.chart-box {
+  width: 100%;
+  min-width: 650px;
+  height: 390px;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .main-container { flex-direction: column; }
+  #map { height: 500px; min-width: unset; }
+  .form-section { width: 100%; max-width: 500px; margin: 0 auto; }
+  .chart-box { min-width: 300px; }
+}

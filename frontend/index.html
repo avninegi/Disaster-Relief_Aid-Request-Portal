@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Disaster Relief — Aid Request Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.min.js"></script>
+</head>
+<body>
+  <h1> Disaster Relief — Aid Request Portal</h1>
+  <div class="main-container">
+    <!-- Left panel -->
+    <div class="form-section">
+      <h2>Plan Aid Requests : </h2>
+      <form id="reqForm">
+        <label for="zone">Zone</label>
+        <select id="zone" required></select>
+
+        <label for="resource">Resource Type</label>
+        <select id="resource" required>
+          <option value="food">Food</option>
+          <option value="water">Water</option>
+          <option value="medicine">Medicine</option>
+        </select>
+
+        <label for="severity">Severity (1–10)</label>
+        <input type="number" id="severity" min="1" max="10" value="5" required />
+
+        <label for="population">Population</label>
+        <input type="number" id="population" value="100" required />
+
+        <label for="lastAid">Days since last aid (0 if never)</label>
+        <input type="number" id="lastAid" value="0" required />
+
+        <div class="button-group">
+          <button type="button" id="addZoneBtn" class="btn-secondary">Add Zone</button>
+          <button type="submit" class="btn-primary">Submit All Requests</button>
+        </div>
+      </form>
+      <h3>Added Zones : </h3>
+      <ul id="addedZonesList"></ul>
+    </div>
+    <!-- Right side: Map (made bigger by CSS) -->
+    <div id="map"></div>
+  </div>
+  <!-- Charts -->
+  <section class="stats-section">
+    <h2>Zone Statistics :</h2>
+    <div class="chart-container">
+      <div class="chart-box">
+        <canvas id="priorityChart"></canvas>
+      </div>
+      <div class="chart-box">
+        <canvas id="resourceChart"></canvas>
+      </div>
+    </div>
+  </section>
+  <script src="app.js"></script>
+</body>
+</html>
+
