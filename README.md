@@ -1,6 +1,3 @@
-Here's a comprehensive README template for your Disaster Relief Aid Request Portal repo.  
-You can copy this into `README.md` in your GitHub repo root.
-
 ***
 
 # Disaster Relief Aid Request Portal
