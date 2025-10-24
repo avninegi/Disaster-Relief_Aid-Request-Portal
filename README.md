@@ -52,6 +52,7 @@ It uses data structures & algorithms (Dijkstra's shortest path, priority queue l
 
 ## Project Structure
 ```
+```
 /backend
     app.py
     dijkstra.py
