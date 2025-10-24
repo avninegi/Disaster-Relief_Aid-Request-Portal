@@ -1,19 +1,18 @@
-***
+#### 🌍 Disaster Relief Aid Request Portal
 
-# Disaster Relief Aid Request Portal
-
-A simulation-based platform for efficient disaster relief resource allocation using Dijkstra's algorithm, priority scoring, and interactive map visualization (Flask backend, Leaflet/Chart.js frontend).
+> **Efficient, simulation-based decision support for resource allocation in disaster scenarios. Combines Dijkstra’s algorithm, intelligent prioritization, and interactive web mapping.**
 
 ***
 
-## Table of Contents
-- [About the Project](#about-the-project)
+### 📋 Table of Contents
+- [Overview](#overview)
 - [Features](#features)
-- [Technology Stack](#technology-stack)
+- [Tech Stack](#tech-stack)
 - [Project Structure](#project-structure)
-- [Setup Instructions](#setup-instructions)
-- [Usage](#usage)
+- [Getting Started](#getting-started)
 - [Screenshots](#screenshots)
+- [Usage](#usage)
+- [Troubleshooting](#troubleshooting)
 - [Contributing](#contributing)
 - [Team](#team)
 - [License](#license)
@@ -21,147 +20,176 @@ A simulation-based platform for efficient disaster relief resource allocation us
 
 ***
 
-## About the Project
+## 🚨 Overview
 
-This portal simulates disaster relief resource allocation to affected zones.  
-It uses data structures & algorithms (Dijkstra's shortest path, priority queue logic) combined with a user-friendly web dashboard, allowing planners to optimize delivery routes and visualize priorities.
-
-***
-
-## Features
-
-- **Aid Request Management**: Add multiple requests for zones/resources; supports food, water, medicine.
-- **Intelligent Prioritization**: Automatic "criticality" scoring by severity, population, days since last aid.
-- **Live Routing**: Route calculation via Dijkstra and Leaflet Routing Machine; visualizes optimal paths.
-- **Heat Map & Stats**: Real-time heatmap overlay for crisis zones; dynamic charts of priority/resources.
-- **Interactive UI**: Move depot, submit requests, view popups on affected zones.
-- **Custom Markers & Badges**: Resource/urgency colored pins, "Most Critical" highlighting per resource.
+This portal allows disaster planners to optimize aid delivery to affected zones.  
+It leverages shortest-path algorithms and dynamic priority calculations with a modern, user-focused dashboard.
 
 ***
 
-## Technology Stack
+## ✨ Features
 
-- **Backend**: Python, Flask, SQLite
-- **Frontend**: HTML, CSS, JavaScript
-    - Leaflet.js (map visualization, routing)
-    - Chart.js (priority/resource statistics)
-    - Leaflet.heat (crisis severity heatmap)
-- **Data Structures & Algorithms**: Dijkstra's, priority queue, graph simulation
+- **Aid Request Submission**: Choose zone/resource, severity, population.
+- **Data Structures & Algorithms**: Dijkstra for pathfinding, priority queues for request urgency.
+- **Live Map Routing**: Visualizes optimized routes from depot to affected zones.
+- **Criticality Analytics**: Auto "Most Critical" highlighting, real-time heatmaps, resource charts.
+- **Intuitive Dashboard**: Drag depot, interact with popups, compare zone priorities.
+- **Custom Badges/Markers**: Color-coded pins, urgent zone emphasis.
+
 
 ***
 
-## Project Structure
+## 🛠 Tech Stack
+
+| Area         | Tool/Lib                         |
+|--------------|----------------------------------|
+| Backend      | Python Flask                     |
+| Database     | SQLite                           |
+| Frontend     | HTML, CSS, JavaScript            |
+| Map/Routing  | Leaflet.js, Leaflet Routing Machine, Leaflet.heat |
+| Analytics    | Chart.js                         |
+
+***
+
+## 📁 Project Structure
 
 ```
-/backend
+backend/
     app.py
     dijkstra.py
     models.py
     requirements.txt
     seed.sql
-    db.sqlite3 (optional – usually generated from seed)
-/frontend
+    db.sqlite3          # (auto-generated, optional to commit)
+frontend/
     index.html
     app.js
     styles.css
-/screenshots
+screenshots/
     Screenshot-142.jpg
     Screenshot-143.jpg
     Screenshot-144.jpg
-... (additional assets)
-DSA_PBL-phase-2-report.pdf
+    Screenshot-145.jpg
+    Screenshot-146.jpg
 README.md
 
 ```
 
 ***
 
-## Setup Instructions
+#### 🚀 Getting Started
 
 ### Prerequisites
-
 - Python 3.x
 - pip
-- Node.js (optional, not required for static frontend)
 
-### 1. Install backend dependencies
+### 1. Clone the repository
+```bash
+git clone https://github.com/kumar-shubham1/Disaster-Relief_Aid-Request-Portal.git
+cd Disaster-Relief_Aid-Request-Portal
+```
 
+### 2. Create and activate a virtual environment
+**Windows:**
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+**Linux/Mac:**
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+### 3. Install backend dependencies
 ```bash
 pip install -r backend/requirements.txt
 ```
 
-### 2. Set up the database
-
+### 4. Initialize the database
+**Option A:**
 ```bash
 python backend/init_db.py
 ```
-*(Or use sqlite3 and seed.sql as needed)*
+**Option B (manual):**
+```bash
+python -c "import sqlite3, pathlib; db=sqlite3.connect('backend/db.sqlite3'); db.executescript(pathlib.Path('backend/seed.sql').read_text()); db.commit(); db.close()"
+```
 
-### 3. Run the Flask backend
-
+### 5. Start the backend server
 ```bash
 python backend/app.py
 ```
+Backend running at: [http://127.0.0.1:5000](http://127.0.0.1:5000)
 
-### 4. Run the frontend locally (from the frontend directory)
-
+### 6. Start the frontend server (in frontend folder)
 ```bash
+cd frontend
 python -m http.server 8000
 ```
-Then visit: [http://localhost:8000](http://localhost:8000)
+Frontend at: [http://localhost:8000](http://localhost:8000)
 
 ***
 
-## Usage
+## 🖼️ Screenshots
 
-1. Start both backend and frontend servers.
-2. Open the app in your browser.
-3. Select zones and resources, add requests, and click "Submit All Requests."
-4. View optimized resource routes, priorities on charts, and heatmap visualization.
-5. Hover over zone markers for critical details (distance, route).
+### Map with routes and affected zones
+![Map with Routes](screenshots/Screenshot-142screenshots/Screenshot-146/resource bar charts
+![Priority Chart](screenshots/Screenshot-143screenshots/Screenshot-144 request dashboard UI
+![Dashboard UI](screenshots/Screenshot-144 Usage
 
-***
-
-## Screenshots
-
-_Add screenshots from `/screenshots` here (drag onto README or link):_
-
-- Map with routes and affected zones
-- Priority/resource bar charts
-- Criticality heatmap overlay
-- Aid request UI
+- Open your browser at [http://localhost:8000](http://localhost:8000)
+- **Add aid requests:** select zone, resource type, severity, population.
+- **See dynamic routing:** Dijkstra finds the fastest allocation path.
+- **View analytics:** Check “Most Critical” badges, heatmap, and bar charts.
+- **Get details instantly:** Hover/click markers for zone data and route/distance info.
 
 ***
 
-## Contributing
+## 🛟 Troubleshooting
+
+| Issue                                | Solution                                    |
+|---------------------------------------|---------------------------------------------|
+| Could not run Flask                   | Activate your virtual environment           |
+| Dependency errors                     | Run `pip install -r backend/requirements.txt` |
+| Database not found                    | Run database setup step above               |
+| Port already in use                   | Change port in the command (add `--port`)   |
+| Frontend not loading                  | Ensure both backend and frontend servers are running |
+
+
+***
+
+## 💡 Contributing
 
 Pull requests are welcome!  
-To contribute, fork the repo, create a new branch, and submit your changes via PR.
+Fork the repo, create a feature branch, open a PR.
 
 ***
 
-## Team
+## 🧑‍💻 Team
 
-- **Shubham Kumar**  
+- **Shubham Kumar**
 - **Avni Negi**
 - **Jahnvi Sharma**
 - **Parikshit Panwar**
 
 ***
 
-## License
+## 📜 License
 
-This project is for academic use and demonstration.  
-See LICENSE file for details, or specify your open-source license here.
+This project is for academic/demonstration use under GEU CSE PBL.
 
 ***
 
-## References
+## 🔗 References
 
 - [LeafletJS](https://leafletjs.com)
 - [Chart.js](https://www.chartjs.org/)
-- [Render](https://render.com/)
-- [Python Flask Docs](https://flask.palletsprojects.com/)
+- [Python Flask](https://flask.palletsprojects.com/)
+- [Render Cloud Hosting](https://render.com/)
 
 ***
 
+
+This is GitHub-ready and visually appealing.  
+If you want even more styling, add badges at the top — or create separate sections for demo links or report PDF. Just say the word!
