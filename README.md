@@ -143,7 +143,9 @@ To contribute, fork the repo, create a new branch, and submit your changes via P
 ## Team
 
 - **Shubham Kumar**  
-- Add other members here as needed.
+- **Avni Negi**
+- **Jahnvi Sharma**
+- **Parikshit Panwar**
 
 ***
 
