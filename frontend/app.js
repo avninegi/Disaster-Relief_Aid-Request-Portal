@@ -17,7 +17,7 @@ function computeCriticality(z) {
 }
 
 function getResourceColor(resource) {
-  if (resource === "food") return "orange";
+  if (resource === "food") return "green";
   if (resource === "water") return "blue";
   if (resource === "medicine") return "red";
   return "gray";
